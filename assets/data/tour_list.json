@@ -1,0 +1,183 @@
+[
+  {
+    "id": 1,
+    "tour_name": "Paris Adventure",
+    "location": "Paris, France",
+    "duration": "7 days",
+    "price_per_person": 1200,
+    "available_dates": [
+      "2024-01-15",
+      "2024-02-20",
+      "2024-03-10"
+    ],
+    "tour_type": "Adventure",
+    "description": "Explore the wonders of Paris including the Eiffel Tower, Louvre, and more.",
+    "image": "assets/dummy/tour/tour_1.jpg",
+    "average_rating": 4.7,
+    "total_reviews": 112,
+    "status": "active"
+  },
+  {
+    "id": 2,
+    "tour_name": "Safari in Kenya",
+    "location": "Nairobi, Kenya",
+    "duration": "10 days",
+    "price_per_person": 2000,
+    "available_dates": [
+      "2024-04-01",
+      "2024-05-15",
+      "2024-06-10"
+    ],
+    "tour_type": "Safari",
+    "description": "Experience wildlife in Kenya with guided safaris in the Serengeti and Maasai Mara.",
+    "image": "assets/dummy/tour/tour_2.jpg",
+    "average_rating": 4.9,
+    "total_reviews": 90,
+    "status": "active"
+  },
+  {
+    "id": 3,
+    "tour_name": "Cultural Japan Tour",
+    "location": "Tokyo, Japan",
+    "duration": "5 days",
+    "price_per_person": 1500,
+    "available_dates": [
+      "2024-02-01",
+      "2024-04-20",
+      "2024-06-15"
+    ],
+    "tour_type": "Cultural",
+    "description": "Discover the rich history and culture of Japan, from temples to sushi making.",
+    "image": "assets/dummy/tour/tour_3.jpg",
+    "average_rating": 4.8,
+    "total_reviews": 75,
+    "status": "inactive"
+  },
+  {
+    "id": 4,
+    "tour_name": "Greek Island Hopping",
+    "location": "Santorini, Greece",
+    "duration": "8 days",
+    "price_per_person": 1800,
+    "available_dates": [
+      "2024-07-01",
+      "2024-08-15",
+      "2024-09-10"
+    ],
+    "tour_type": "Leisure",
+    "description": "Experience the best of Greece by hopping between its famous islands.",
+    "image": "assets/dummy/tour/tour_4.jpg",
+    "average_rating": 4.6,
+    "total_reviews": 104,
+    "status": "active"
+  },
+  {
+    "id": 5,
+    "tour_name": "Machu Picchu Trek",
+    "location": "Cusco, Peru",
+    "duration": "6 days",
+    "price_per_person": 2200,
+    "available_dates": [
+      "2024-01-10",
+      "2024-03-05",
+      "2024-05-15"
+    ],
+    "tour_type": "Adventure",
+    "description": "Trek through the Andes to the breathtaking Machu Picchu.",
+    "image": "assets/dummy/tour/tour_5.jpg",
+    "average_rating": 5.0,
+    "total_reviews": 59,
+    "status": "active"
+  },
+  {
+    "id": 6,
+    "tour_name": "New Zealand Explorer",
+    "location": "Auckland, New Zealand",
+    "duration": "12 days",
+    "price_per_person": 3500,
+    "available_dates": [
+      "2024-05-01",
+      "2024-07-15",
+      "2024-09-20"
+    ],
+    "tour_type": "Adventure",
+    "description": "Explore New Zealand’s beautiful landscapes, including Hobbiton and Milford Sound.",
+    "image": "assets/dummy/tour/tour_6.jpg",
+    "average_rating": 4.8,
+    "total_reviews": 80,
+    "status": "active"
+  },
+  {
+    "id": 7,
+    "tour_name": "Egyptian Wonders",
+    "location": "Cairo, Egypt",
+    "duration": "9 days",
+    "price_per_person": 2500,
+    "available_dates": [
+      "2024-04-01",
+      "2024-06-10",
+      "2024-08-20"
+    ],
+    "tour_type": "Cultural",
+    "description": "Discover the ancient wonders of Egypt, including the pyramids and the Sphinx.",
+    "image": "assets/dummy/tour/tour_7.jpg",
+    "average_rating": 4.7,
+    "total_reviews": 95,
+    "status": "active"
+  },
+  {
+    "id": 8,
+    "tour_name": "Alaskan Cruise",
+    "location": "Anchorage, Alaska, USA",
+    "duration": "7 days",
+    "price_per_person": 2800,
+    "available_dates": [
+      "2024-06-05",
+      "2024-07-25",
+      "2024-08-10"
+    ],
+    "tour_type": "Cruise",
+    "description": "Sail through the Alaskan wilderness and enjoy breathtaking landscapes.",
+    "image": "assets/dummy/tour/tour_8.jpg",
+    "average_rating": 4.5,
+    "total_reviews": 120,
+    "status": "active"
+  },
+  {
+    "id": 9,
+    "tour_name": "Australian Outback Adventure",
+    "location": "Alice Springs, Australia",
+    "duration": "10 days",
+    "price_per_person": 2600,
+    "available_dates": [
+      "2024-05-15",
+      "2024-08-01",
+      "2024-09-30"
+    ],
+    "tour_type": "Adventure",
+    "description": "Venture into the Australian Outback and experience its rugged beauty.",
+    "image": "assets/dummy/tour/tour_9.jpg",
+    "average_rating": 4.6,
+    "total_reviews": 100,
+    "status": "inactive"
+  },
+  {
+    "id": 10,
+    "tour_name": "Tropical Bali Escape",
+    "location": "Bali, Indonesia",
+    "duration": "5 days",
+    "price_per_person": 1200,
+    "available_dates": [
+      "2024-03-10",
+      "2024-06-05",
+      "2024-09-15"
+    ],
+    "tour_type": "Leisure",
+    "description": "Relax and unwind in Bali with stunning beaches and peaceful retreats.",
+    "image": "assets/dummy/tour/tour_10.jpg",
+    "average_rating": 4.9,
+    "total_reviews": 210,
+    "status": "active"
+  }
+]
+

@@ -1,7 +1,6 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:nevate_portfolio/core/res/responsive.dart';
+import 'package:nevate_portfolio/presentation/screens/home/desktop_home_screen.dart';
 import 'package:nevate_portfolio/widgets/portfolio_buttton.dart';
 import 'package:responsive_grid/responsive_grid.dart';
 
@@ -10,23 +9,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Responsive(
-      mobile: HomeMobile(),
-      tablet: HomeTablet(),
-      desktop: HomeDesktop(),
-    );
-
-    // Scaffold(
-    //   body: SingleChildScrollView(
-    // child: Column(
-    //       children: [
-    //         HeaderAreaSection(
-    //           size: size,
-    //         ),
-    //       ],
-    //     ),
-    //   ),
-    // );
+    return DesktopHomeScreen();
   }
 }
 
@@ -201,7 +184,7 @@ class HomeMobile extends StatelessWidget {
                             ),
                           ),
                           SizedBox(
-                            height: 20.h,
+                            height: 20,
                           ),
                           PortfolioButtonMobile(),
                           SizedBox(
@@ -215,13 +198,13 @@ class HomeMobile extends StatelessWidget {
               ),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
-                padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
+                padding: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
                 child: Row(
                   children: [
                     /// 🟣 Happy Clients Card
                     _buildClientCard(),
 
-                    SizedBox(width: 16.w),
+                    SizedBox(width: 16),
 
                     /// 🟣 Safety Privacy Card
                     _buildInfoCard(
@@ -230,7 +213,7 @@ class HomeMobile extends StatelessWidget {
                       label: "Safety Privacy",
                     ),
 
-                    SizedBox(width: 16.w),
+                    SizedBox(width: 16),
 
                     /// 🟣 Event Rating Card
                     _buildInfoCard(
@@ -242,14 +225,14 @@ class HomeMobile extends StatelessWidget {
                 ),
               ),
               SingleChildScrollView(
-                padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
+                padding: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
                 child: Column(
                   children: [
                     /// 🟣 Happy Clients Card
                     Container(
-                      padding: EdgeInsets.all(20.r),
+                      padding: EdgeInsets.all(20),
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20.r),
+                        borderRadius: BorderRadius.circular(20),
                         border: Border.all(color: Colors.white, width: 2),
                       ),
                       child: Row(
@@ -264,17 +247,17 @@ class HomeMobile extends StatelessWidget {
                                 Text(
                                   "1.5K",
                                   style: TextStyle(
-                                    fontSize: 28.sp,
+                                    fontSize: 28,
                                     fontWeight: FontWeight.bold,
                                     color: Colors.white,
                                     fontFamily: 'Outfit',
                                   ),
                                 ),
-                                SizedBox(height: 4.h),
+                                SizedBox(height: 4),
                                 Text(
                                   "Happy Clients",
                                   style: TextStyle(
-                                    fontSize: 20.sp,
+                                    fontSize: 20,
                                     color: Colors.white,
                                     fontFamily: 'Outfit',
                                     fontWeight: FontWeight.w500,
@@ -286,18 +269,18 @@ class HomeMobile extends StatelessWidget {
 
                           /// Right: Stacked Avatars
                           SizedBox(
-                            width: 110.w,
-                            height: 46.h,
+                            width: 110,
+                            height: 46,
                             child: Stack(
                               clipBehavior: Clip.none,
                               children: List.generate(3, (index) {
                                 return Positioned(
-                                  left: index * 30.w,
+                                  left: index * 30,
                                   child: CircleAvatar(
-                                    radius: 23.r,
+                                    radius: 23,
                                     backgroundColor: Colors.white,
                                     child: CircleAvatar(
-                                      radius: 20.r,
+                                      radius: 20,
                                       backgroundImage: NetworkImage(
                                         "https://yt3.googleusercontent.com/p9Vw8tiYXeJNLR7A39Nc54EkZcfYs5J6HYBbhiQbWU5u4f6iZ-UUT-y_cfdZTy86PMYNAVx3PA=s150-c-k-c0x00ffffff-no-rj",
                                       ),
@@ -311,7 +294,7 @@ class HomeMobile extends StatelessWidget {
                       ),
                     ),
 
-                    SizedBox(height: 16.h),
+                    SizedBox(height: 16),
 
                     /// 🟣 Info Card 1
                     _buildInfoCard(
@@ -320,7 +303,7 @@ class HomeMobile extends StatelessWidget {
                       label: "Safety Privacy",
                     ),
 
-                    SizedBox(height: 16.h),
+                    SizedBox(height: 16),
 
                     /// 🟣 Info Card 2
                     _buildInfoCard(
@@ -339,11 +322,11 @@ class HomeMobile extends StatelessWidget {
                     md: 12,
                     sm: 12,
                     child: Container(
-                      margin: EdgeInsets.symmetric(
-                          vertical: 12.h, horizontal: 16.w),
-                      padding: EdgeInsets.all(20.r),
+                      margin:
+                          EdgeInsets.symmetric(vertical: 12, horizontal: 16),
+                      padding: EdgeInsets.all(20),
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20.r),
+                        borderRadius: BorderRadius.circular(20),
                         border: Border.all(color: Colors.white, width: 2),
                       ),
                       child: Row(
@@ -357,17 +340,17 @@ class HomeMobile extends StatelessWidget {
                                 Text(
                                   "1.5K",
                                   style: TextStyle(
-                                    fontSize: 28.sp,
+                                    fontSize: 28,
                                     fontWeight: FontWeight.bold,
                                     color: Colors.white,
                                     fontFamily: 'Outfit',
                                   ),
                                 ),
-                                SizedBox(height: 4.h),
+                                SizedBox(height: 4),
                                 Text(
                                   "Happy Clients",
                                   style: TextStyle(
-                                    fontSize: 20.sp,
+                                    fontSize: 20,
                                     color: Colors.white,
                                     fontFamily: 'Outfit',
                                     fontWeight: FontWeight.w500,
@@ -379,18 +362,18 @@ class HomeMobile extends StatelessWidget {
 
                           /// Right Side - Stacked Avatars (Fixed height wrapper)
                           SizedBox(
-                            width: 110.w,
-                            height: 46.h,
+                            width: 110,
+                            height: 46,
                             child: Stack(
                               clipBehavior: Clip.none,
                               children: List.generate(3, (index) {
                                 return Positioned(
-                                  left: index * 30.w,
+                                  left: index * 30,
                                   child: CircleAvatar(
-                                    radius: 23.r,
+                                    radius: 23,
                                     backgroundColor: Colors.white,
                                     child: CircleAvatar(
-                                      radius: 20.r,
+                                      radius: 20,
                                       backgroundImage: NetworkImage(
                                         "https://yt3.googleusercontent.com/p9Vw8tiYXeJNLR7A39Nc54EkZcfYs5J6HYBbhiQbWU5u4f6iZ-UUT-y_cfdZTy86PMYNAVx3PA=s150-c-k-c0x00ffffff-no-rj",
                                       ),
@@ -417,7 +400,7 @@ class HomeMobile extends StatelessWidget {
                           percentage: "100%",
                           label: "Safety Privacy",
                         ),
-                        SizedBox(height: 12.h),
+                        SizedBox(height: 12),
                         _buildInfoCard(
                           icon: Icons.star,
                           percentage: "98%",
@@ -435,17 +418,17 @@ class HomeMobile extends StatelessWidget {
                   children: [
                     Spacer(),
                     Container(
-                      width: 350.w,
-                      height: 150.h,
+                      width: 350,
+                      height: 150,
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(24.0.r),
+                        borderRadius: BorderRadius.circular(24.0),
                         border: Border.all(
                           width: 2,
                           color: Colors.white,
                         ),
                       ),
                       child: Padding(
-                        padding: EdgeInsets.all(25.r),
+                        padding: EdgeInsets.all(25),
                         child: Row(
                           children: [
                             Expanded(
@@ -458,7 +441,7 @@ class HomeMobile extends StatelessWidget {
                                   Text(
                                     "1,5K",
                                     style: TextStyle(
-                                      fontSize: 28.sp,
+                                      fontSize: 28,
                                       color: Colors.white,
                                       fontFamily: "Outfit",
                                       fontWeight: FontWeight.bold,
@@ -467,7 +450,7 @@ class HomeMobile extends StatelessWidget {
                                   Text(
                                     "Happy Clients",
                                     style: TextStyle(
-                                      fontSize: 20.sp,
+                                      fontSize: 20,
                                       color: Colors.white,
                                       fontFamily: "Outfit",
                                       fontWeight: FontWeight.w500,
@@ -477,18 +460,18 @@ class HomeMobile extends StatelessWidget {
                               ),
                             ),
                             SizedBox(
-                              width: 20.w,
+                              width: 20,
                             ),
                             Expanded(
                               child: Stack(
                                 children: [
                                   Positioned(
-                                    left: 0.w,
+                                    left: 0,
                                     child: SizedBox(
                                       child: CircleAvatar(
-                                        radius: 23.r,
+                                        radius: 23,
                                         child: CircleAvatar(
-                                          radius: 20.r,
+                                          radius: 20,
                                           backgroundImage: NetworkImage(
                                               "https://yt3.googleusercontent.com/p9Vw8tiYXeJNLR7A39Nc54EkZcfYs5J6HYBbhiQbWU5u4f6iZ-UUT-y_cfdZTy86PMYNAVx3PA=s150-c-k-c0x00ffffff-no-rj"),
                                         ),
@@ -496,12 +479,12 @@ class HomeMobile extends StatelessWidget {
                                     ),
                                   ),
                                   Positioned(
-                                    left: 30.w,
+                                    left: 30,
                                     child: SizedBox(
                                       child: CircleAvatar(
-                                        radius: 23.r,
+                                        radius: 23,
                                         child: CircleAvatar(
-                                          radius: 20.r,
+                                          radius: 20,
                                           backgroundImage: NetworkImage(
                                               "https://yt3.googleusercontent.com/p9Vw8tiYXeJNLR7A39Nc54EkZcfYs5J6HYBbhiQbWU5u4f6iZ-UUT-y_cfdZTy86PMYNAVx3PA=s150-c-k-c0x00ffffff-no-rj"),
                                         ),
@@ -509,12 +492,12 @@ class HomeMobile extends StatelessWidget {
                                     ),
                                   ),
                                   Positioned(
-                                    left: 60.w,
+                                    left: 60,
                                     child: SizedBox(
                                       child: CircleAvatar(
-                                        radius: 23.r,
+                                        radius: 23,
                                         child: CircleAvatar(
-                                          radius: 20.r,
+                                          radius: 20,
                                           backgroundImage: NetworkImage(
                                               "https://yt3.googleusercontent.com/p9Vw8tiYXeJNLR7A39Nc54EkZcfYs5J6HYBbhiQbWU5u4f6iZ-UUT-y_cfdZTy86PMYNAVx3PA=s150-c-k-c0x00ffffff-no-rj"),
                                         ),
@@ -529,28 +512,27 @@ class HomeMobile extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                      width: 20.w,
+                      width: 20,
                     ),
                     Container(
-                      height: 150.h,
+                      height: 150,
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(24.0.r),
+                        borderRadius: BorderRadius.circular(24.0),
                         border: Border.all(
                           width: 2,
                           color: Colors.white,
                         ),
                       ),
                       child: Padding(
-                        padding: EdgeInsets.all(28.r),
+                        padding: EdgeInsets.all(28),
                         child: Row(
                           children: [
                             Row(
                               children: [
                                 Container(
-                                  width:
-                                      100.w, // Add extra width for the border
+                                  width: 100, // Add extra width for the border
                                   height:
-                                      100.h, // Add extra height for the border
+                                      100, // Add extra height for the border
                                   decoration: BoxDecoration(
                                     gradient: const LinearGradient(
                                       colors: [
@@ -568,10 +550,10 @@ class HomeMobile extends StatelessWidget {
                                   ),
                                   child: Padding(
                                     padding: EdgeInsets.all(
-                                        2.w), // Adjust border thickness
+                                        2), // Adjust border thickness
                                     child: Container(
-                                      width: 100.w,
-                                      height: 100.h,
+                                      width: 100,
+                                      height: 100,
                                       decoration: BoxDecoration(
                                         color: Colors
                                             .white, // Background color of the button
@@ -580,14 +562,14 @@ class HomeMobile extends StatelessWidget {
                                       child: Center(
                                         child: Icon(
                                           Icons.security,
-                                          size: 28.h,
+                                          size: 28,
                                         ),
                                       ),
                                     ),
                                   ),
                                 ),
                                 SizedBox(
-                                  width: 10.w,
+                                  width: 10,
                                 ),
                                 Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -596,7 +578,7 @@ class HomeMobile extends StatelessWidget {
                                     Text(
                                       "100%",
                                       style: TextStyle(
-                                        fontSize: 28.sp,
+                                        fontSize: 28,
                                         color: Colors.white,
                                         fontFamily: "Outfit",
                                         fontWeight: FontWeight.bold,
@@ -605,7 +587,7 @@ class HomeMobile extends StatelessWidget {
                                     Text(
                                       "Safety Privacy",
                                       style: TextStyle(
-                                        fontSize: 22.sp,
+                                        fontSize: 22,
                                         color: Colors.white,
                                         fontFamily: "Outfit",
                                         fontWeight: FontWeight.bold,
@@ -616,15 +598,14 @@ class HomeMobile extends StatelessWidget {
                               ],
                             ),
                             SizedBox(
-                              width: 20.w,
+                              width: 20,
                             ),
                             Row(
                               children: [
                                 Container(
-                                  width:
-                                      100.w, // Add extra width for the border
+                                  width: 100, // Add extra width for the border
                                   height:
-                                      100.h, // Add extra height for the border
+                                      100, // Add extra height for the border
                                   decoration: BoxDecoration(
                                     gradient: const LinearGradient(
                                       colors: [
@@ -644,8 +625,8 @@ class HomeMobile extends StatelessWidget {
                                     padding: const EdgeInsets.all(
                                         2), // Adjust border thickness
                                     child: Container(
-                                      width: 100.w,
-                                      height: 100.h,
+                                      width: 100,
+                                      height: 100,
                                       decoration: BoxDecoration(
                                         color: Colors
                                             .white, // Background color of the button
@@ -654,14 +635,14 @@ class HomeMobile extends StatelessWidget {
                                       child: Center(
                                         child: Icon(
                                           Icons.star,
-                                          size: 28.h,
+                                          size: 28,
                                         ),
                                       ),
                                     ),
                                   ),
                                 ),
                                 SizedBox(
-                                  width: 10.w,
+                                  width: 10,
                                 ),
                                 Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -670,7 +651,7 @@ class HomeMobile extends StatelessWidget {
                                     Text(
                                       "98%",
                                       style: TextStyle(
-                                        fontSize: 28.sp,
+                                        fontSize: 28,
                                         color: Colors.white,
                                         fontFamily: "Outfit",
                                         fontWeight: FontWeight.bold,
@@ -679,7 +660,7 @@ class HomeMobile extends StatelessWidget {
                                     Text(
                                       "Event Rating",
                                       style: TextStyle(
-                                        fontSize: 22.sp,
+                                        fontSize: 22,
                                         color: Colors.white,
                                         fontFamily: "Outfit",
                                         fontWeight: FontWeight.bold,
@@ -697,23 +678,23 @@ class HomeMobile extends StatelessWidget {
                       width: 10,
                     ),
                     Container(
-                      height: 150.h,
+                      height: 150,
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(24.0.r),
+                        borderRadius: BorderRadius.circular(24.0),
                         border: Border.all(
                           width: 2,
                           color: Colors.white,
                         ),
                       ),
                       child: Padding(
-                        padding: EdgeInsets.all(28.r),
+                        padding: EdgeInsets.all(28),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
                               "900+",
                               style: TextStyle(
-                                fontSize: 28.sp,
+                                fontSize: 28,
                                 color: Colors.white,
                                 fontFamily: "Outfit",
                                 fontWeight: FontWeight.bold,
@@ -722,7 +703,7 @@ class HomeMobile extends StatelessWidget {
                             Text(
                               "Project Done",
                               style: TextStyle(
-                                fontSize: 22.sp,
+                                fontSize: 22,
                                 color: Colors.white,
                                 fontFamily: "Outfit",
                                 fontWeight: FontWeight.bold,
@@ -745,10 +726,10 @@ class HomeMobile extends StatelessWidget {
 
   Widget _buildClientCard() {
     return Container(
-      width: 250.w,
-      padding: EdgeInsets.all(20.r),
+      width: 250,
+      padding: EdgeInsets.all(20),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20.r),
+        borderRadius: BorderRadius.circular(20),
         border: Border.all(color: Colors.white, width: 2),
       ),
       child: Row(
@@ -761,17 +742,17 @@ class HomeMobile extends StatelessWidget {
                 Text(
                   "1.5K",
                   style: TextStyle(
-                    fontSize: 28.sp,
+                    fontSize: 28,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
                     fontFamily: 'Outfit',
                   ),
                 ),
-                SizedBox(height: 4.h),
+                SizedBox(height: 4),
                 Text(
                   "Happy Clients",
                   style: TextStyle(
-                    fontSize: 20.sp,
+                    fontSize: 20,
                     color: Colors.white,
                     fontFamily: 'Outfit',
                     fontWeight: FontWeight.w500,
@@ -783,18 +764,18 @@ class HomeMobile extends StatelessWidget {
 
           /// Right: Avatar Stack
           SizedBox(
-            width: 90.w,
-            height: 46.h,
+            width: 90,
+            height: 46,
             child: Stack(
               clipBehavior: Clip.none,
               children: List.generate(3, (index) {
                 return Positioned(
-                  left: index * 30.w,
+                  left: index * 30,
                   child: CircleAvatar(
-                    radius: 23.r,
+                    radius: 23,
                     backgroundColor: Colors.white,
                     child: CircleAvatar(
-                      radius: 20.r,
+                      radius: 20,
                       backgroundImage: NetworkImage(
                         "https://yt3.googleusercontent.com/p9Vw8tiYXeJNLR7A39Nc54EkZcfYs5J6HYBbhiQbWU5u4f6iZ-UUT-y_cfdZTy86PMYNAVx3PA=s150-c-k-c0x00ffffff-no-rj",
                       ),
@@ -815,18 +796,18 @@ class HomeMobile extends StatelessWidget {
     required String label,
   }) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 16.w, vertical: 4.h),
-      padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 16.h),
+      margin: EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20.r),
+        borderRadius: BorderRadius.circular(20),
         border: Border.all(color: Colors.white, width: 2),
       ),
       child: Row(
         children: [
           /// Gradient Circle Icon
           Container(
-            width: 70.w,
-            height: 70.w,
+            width: 70,
+            height: 70,
             decoration: const BoxDecoration(
               gradient: LinearGradient(
                 colors: [
@@ -844,17 +825,17 @@ class HomeMobile extends StatelessWidget {
             ),
             child: Center(
               child: Container(
-                width: 62.w,
-                height: 62.w,
+                width: 62,
+                height: 62,
                 decoration: const BoxDecoration(
                   shape: BoxShape.circle,
                   color: Colors.white,
                 ),
-                child: Icon(icon, size: 28.h, color: Colors.black87),
+                child: Icon(icon, size: 28, color: Colors.black87),
               ),
             ),
           ),
-          SizedBox(width: 14.w),
+          SizedBox(width: 14),
 
           /// Text Info
           Column(
@@ -863,7 +844,7 @@ class HomeMobile extends StatelessWidget {
               Text(
                 percentage,
                 style: TextStyle(
-                  fontSize: 24.sp,
+                  fontSize: 24,
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
                   fontFamily: 'Outfit',
@@ -872,7 +853,7 @@ class HomeMobile extends StatelessWidget {
               Text(
                 label,
                 style: TextStyle(
-                  fontSize: 18.sp,
+                  fontSize: 18,
                   fontWeight: FontWeight.w500,
                   color: Colors.white,
                   fontFamily: 'Outfit',
@@ -882,985 +863,6 @@ class HomeMobile extends StatelessWidget {
           )
         ],
       ),
-    );
-  }
-}
-
-class HomeTablet extends StatelessWidget {
-  const HomeTablet({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        Row(
-          children: [
-            Expanded(
-              child: SizedBox(
-                height: size.height * 1.1.h,
-                child: Padding(
-                  padding: const EdgeInsets.all(0.0),
-                  child: Transform.rotate(
-                    angle: -25,
-                    child: Container(
-                      margin: EdgeInsets.all(50.0),
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: NetworkImage(
-                              "https://images.pexels.com/photos/30481070/pexels-photo-30481070/free-photo-of-soaring-seagull-against-a-clear-blue-sky.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-                            ),
-                            fit: BoxFit.contain),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            Expanded(
-              child: SizedBox(
-                height: size.height * 1.1.h,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      "Sakib Hasan".toUpperCase(),
-                      style: TextStyle(
-                        fontSize: 28.sp,
-                        color: Colors.white,
-                        fontFamily: "Outfit",
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
-                    Text(
-                      "Creative",
-                      textHeightBehavior: TextHeightBehavior(
-                        applyHeightToFirstAscent: false,
-                        applyHeightToLastDescent: false,
-                      ),
-                      style: TextStyle(
-                        fontSize: 48.sp,
-                        color: Colors.white,
-                        fontFamily: "Outfit",
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
-                    Row(
-                      children: [
-                        Text(''),
-                        ShaderMask(
-                          shaderCallback: (_) => LinearGradient(
-                              colors: [
-                                Color(0XFFFB0182),
-                                Color(0XFFD21CE6),
-                                Color(0XFF2FACF7),
-                                Color(0XFF519FFC),
-                                Color(0XFF3934F1),
-                              ],
-                              begin: Alignment.centerLeft,
-                              end: Alignment.centerRight,
-                              stops: [
-                                0.0,
-                                0.37,
-                                0.68,
-                                0.77,
-                                1.0,
-                              ]).createShader(_),
-                          child: AnimatedTextKit(
-                            isRepeatingAnimation: true,
-                            repeatForever: true,
-                            animatedTexts: [
-                              TyperAnimatedText(
-                                "Flutter Developer",
-                                speed: const Duration(milliseconds: 50),
-                                textStyle: TextStyle(
-                                  fontSize: 48.sp,
-                                  color: Colors.white,
-                                  fontFamily: "Outfit",
-                                  fontWeight: FontWeight.w500,
-                                ),
-                              ),
-                              TyperAnimatedText(
-                                "Android App Developer",
-                                speed: const Duration(milliseconds: 50),
-                                textStyle: TextStyle(
-                                  fontSize: 48.sp,
-                                  color: Colors.white,
-                                  fontFamily: "Outfit",
-                                  fontWeight: FontWeight.w500,
-                                ),
-                              ),
-                              TyperAnimatedText(
-                                "IOS App Developer",
-                                speed: const Duration(milliseconds: 50),
-                                textStyle: TextStyle(
-                                  fontSize: 48.sp,
-                                  color: Colors.white,
-                                  fontFamily: "Outfit",
-                                  fontWeight: FontWeight.w500,
-                                ),
-                              ),
-                              TyperAnimatedText(
-                                "Web App Developer",
-                                speed: const Duration(milliseconds: 50),
-                                textStyle: TextStyle(
-                                  fontSize: 48.sp,
-                                  color: Colors.white,
-                                  fontFamily: "Outfit",
-                                  fontWeight: FontWeight.w500,
-                                ),
-                              ),
-                              TyperAnimatedText(
-                                "UI/UX Designer",
-                                speed: const Duration(milliseconds: 50),
-                                textStyle: TextStyle(
-                                  fontSize: 48.sp,
-                                  color: Colors.white,
-                                  fontFamily: "Outfit",
-                                  fontWeight: FontWeight.w500,
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                    Text(
-                      "Professional",
-                      textHeightBehavior: TextHeightBehavior(
-                        applyHeightToFirstAscent: false,
-                        applyHeightToLastDescent: false,
-                      ),
-                      style: TextStyle(
-                        fontSize: 48.sp,
-                        color: Colors.white,
-                        fontFamily: "Outfit",
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
-                    Text(
-                      "Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por\nscientie, musica, sport etc, litot Europa usa li sam vocabular.",
-                      style: TextStyle(
-                        fontSize: 16.sp,
-                        color: Colors.white,
-                      ),
-                    ),
-                    SizedBox(
-                      height: 20.h,
-                    ),
-                    PortfolioButtonTablet(),
-                  ],
-                ),
-              ),
-            ),
-          ],
-        ),
-        Padding(
-          padding: EdgeInsets.symmetric(horizontal: 32.0),
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Spacer(),
-              Container(
-                width: 350.w,
-                height: 150.h,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(24.0.r),
-                  border: Border.all(
-                    width: 2,
-                    color: Colors.white,
-                  ),
-                ),
-                child: Padding(
-                  padding: EdgeInsets.all(25.r),
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Spacer(),
-                            Text(
-                              "1,5K",
-                              style: TextStyle(
-                                fontSize: 28.sp,
-                                color: Colors.white,
-                                fontFamily: "Outfit",
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            Text(
-                              "Happy Clients",
-                              style: TextStyle(
-                                fontSize: 20.sp,
-                                color: Colors.white,
-                                fontFamily: "Outfit",
-                                fontWeight: FontWeight.w500,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      SizedBox(
-                        width: 20.w,
-                      ),
-                      Expanded(
-                        child: Stack(
-                          children: [
-                            Positioned(
-                              left: 0.w,
-                              child: SizedBox(
-                                child: CircleAvatar(
-                                  radius: 23.r,
-                                  child: CircleAvatar(
-                                    radius: 20.r,
-                                    backgroundImage: NetworkImage(
-                                        "https://yt3.googleusercontent.com/p9Vw8tiYXeJNLR7A39Nc54EkZcfYs5J6HYBbhiQbWU5u4f6iZ-UUT-y_cfdZTy86PMYNAVx3PA=s150-c-k-c0x00ffffff-no-rj"),
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Positioned(
-                              left: 30.w,
-                              child: SizedBox(
-                                child: CircleAvatar(
-                                  radius: 23.r,
-                                  child: CircleAvatar(
-                                    radius: 20.r,
-                                    backgroundImage: NetworkImage(
-                                        "https://yt3.googleusercontent.com/p9Vw8tiYXeJNLR7A39Nc54EkZcfYs5J6HYBbhiQbWU5u4f6iZ-UUT-y_cfdZTy86PMYNAVx3PA=s150-c-k-c0x00ffffff-no-rj"),
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Positioned(
-                              left: 60.w,
-                              child: SizedBox(
-                                child: CircleAvatar(
-                                  radius: 23.r,
-                                  child: CircleAvatar(
-                                    radius: 20.r,
-                                    backgroundImage: NetworkImage(
-                                        "https://yt3.googleusercontent.com/p9Vw8tiYXeJNLR7A39Nc54EkZcfYs5J6HYBbhiQbWU5u4f6iZ-UUT-y_cfdZTy86PMYNAVx3PA=s150-c-k-c0x00ffffff-no-rj"),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              SizedBox(
-                width: 20.w,
-              ),
-              Container(
-                height: 150.h,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(24.0.r),
-                  border: Border.all(
-                    width: 2,
-                    color: Colors.white,
-                  ),
-                ),
-                child: Padding(
-                  padding: EdgeInsets.all(28.r),
-                  child: Row(
-                    children: [
-                      Row(
-                        children: [
-                          Container(
-                            width: 100.w, // Add extra width for the border
-                            height: 100.h, // Add extra height for the border
-                            decoration: BoxDecoration(
-                              gradient: const LinearGradient(
-                                colors: [
-                                  Color(0XFFFB0182),
-                                  Color(0XFFD21CE6),
-                                  Color(0XFF2FACF7),
-                                  Color(0XFF519FFC),
-                                  Color(0XFF3934F1),
-                                ],
-                                begin: Alignment.topLeft,
-                                end: Alignment.bottomRight,
-                                stops: [0.0, 0.37, 0.68, 0.77, 1.0],
-                              ),
-                              shape: BoxShape.circle,
-                            ),
-                            child: Padding(
-                              padding: EdgeInsets.all(
-                                  2.w), // Adjust border thickness
-                              child: Container(
-                                width: 100.w,
-                                height: 100.h,
-                                decoration: BoxDecoration(
-                                  color: Colors
-                                      .white, // Background color of the button
-                                  shape: BoxShape.circle,
-                                ),
-                                child: Center(
-                                  child: Icon(
-                                    Icons.security,
-                                    size: 28.h,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                          SizedBox(
-                            width: 10.w,
-                          ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                "100%",
-                                style: TextStyle(
-                                  fontSize: 28.sp,
-                                  color: Colors.white,
-                                  fontFamily: "Outfit",
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                              Text(
-                                "Safety Privacy",
-                                style: TextStyle(
-                                  fontSize: 22.sp,
-                                  color: Colors.white,
-                                  fontFamily: "Outfit",
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ],
-                          )
-                        ],
-                      ),
-                      SizedBox(
-                        width: 20.w,
-                      ),
-                      Row(
-                        children: [
-                          Container(
-                            width: 100.w, // Add extra width for the border
-                            height: 100.h, // Add extra height for the border
-                            decoration: BoxDecoration(
-                              gradient: const LinearGradient(
-                                colors: [
-                                  Color(0XFFFB0182),
-                                  Color(0XFFD21CE6),
-                                  Color(0XFF2FACF7),
-                                  Color(0XFF519FFC),
-                                  Color(0XFF3934F1),
-                                ],
-                                begin: Alignment.topLeft,
-                                end: Alignment.bottomRight,
-                                stops: [0.0, 0.37, 0.68, 0.77, 1.0],
-                              ),
-                              shape: BoxShape.circle,
-                            ),
-                            child: Padding(
-                              padding: const EdgeInsets.all(
-                                  2), // Adjust border thickness
-                              child: Container(
-                                width: 100.w,
-                                height: 100.h,
-                                decoration: BoxDecoration(
-                                  color: Colors
-                                      .white, // Background color of the button
-                                  shape: BoxShape.circle,
-                                ),
-                                child: Center(
-                                  child: Icon(
-                                    Icons.star,
-                                    size: 28.h,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                          SizedBox(
-                            width: 10.w,
-                          ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                "98%",
-                                style: TextStyle(
-                                  fontSize: 28.sp,
-                                  color: Colors.white,
-                                  fontFamily: "Outfit",
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                              Text(
-                                "Event Rating",
-                                style: TextStyle(
-                                  fontSize: 22.sp,
-                                  color: Colors.white,
-                                  fontFamily: "Outfit",
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ],
-                          )
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              SizedBox(
-                width: 10,
-              ),
-              Container(
-                height: 150.h,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(24.0.r),
-                  border: Border.all(
-                    width: 2,
-                    color: Colors.white,
-                  ),
-                ),
-                child: Padding(
-                  padding: EdgeInsets.all(28.r),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "900+",
-                        style: TextStyle(
-                          fontSize: 28.sp,
-                          color: Colors.white,
-                          fontFamily: "Outfit",
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      Text(
-                        "Project Done",
-                        style: TextStyle(
-                          fontSize: 22.sp,
-                          color: Colors.white,
-                          fontFamily: "Outfit",
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              Spacer(),
-            ],
-          ),
-        ),
-      ],
-    );
-  }
-}
-
-class HomeDesktop extends StatelessWidget {
-  const HomeDesktop({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
-    return SizedBox(
-      height: MediaQuery.of(context).size.height,
-      child: HeaderAreaSection(size: size),
-    );
-  }
-}
-
-class HeaderAreaSection extends StatelessWidget {
-  const HeaderAreaSection({super.key, required this.size});
-
-  final Size size;
-
-  @override
-  Widget build(BuildContext context) {
-    return HeroSection(size: size);
-  }
-}
-
-class HeroSection extends StatelessWidget {
-  const HeroSection({super.key, required this.size});
-
-  final Size size;
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        Row(
-          children: [
-            Expanded(
-              child: SizedBox(
-                height: size.height * 1.2.h,
-                child: Padding(
-                  padding: const EdgeInsets.all(50.0),
-                  child: Transform.rotate(
-                    angle: -25,
-                    child: Container(
-                      margin: EdgeInsets.all(50.0),
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: NetworkImage(
-                              "https://images.pexels.com/photos/30481070/pexels-photo-30481070/free-photo-of-soaring-seagull-against-a-clear-blue-sky.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-                            ),
-                            fit: BoxFit.contain),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            Expanded(
-              child: SizedBox(
-                height: size.height * 1.2.h,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      "Sakib Hasan".toUpperCase(),
-                      style: TextStyle(
-                        fontSize: 21.sp,
-                        color: Colors.white,
-                        fontFamily: "Outfit",
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
-                    Text(
-                      "Creative",
-                      textHeightBehavior: TextHeightBehavior(
-                        applyHeightToFirstAscent: false,
-                        applyHeightToLastDescent: false,
-                      ),
-                      style: TextStyle(
-                        fontSize: 48.sp,
-                        color: Colors.white,
-                        fontFamily: "Outfit",
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
-                    SizedBox(
-                      height: 100.h,
-                      child: ShaderMask(
-                        shaderCallback: (_) => LinearGradient(
-                            colors: [
-                              Color(0XFFFB0182),
-                              Color(0XFFD21CE6),
-                              Color(0XFF2FACF7),
-                              Color(0XFF519FFC),
-                              Color(0XFF3934F1),
-                            ],
-                            begin: Alignment.centerLeft,
-                            end: Alignment.centerRight,
-                            stops: [
-                              0.0,
-                              0.37,
-                              0.68,
-                              0.77,
-                              1.0,
-                            ]).createShader(_),
-                        child: AnimatedTextKit(
-                          isRepeatingAnimation: true,
-                          repeatForever: true,
-                          animatedTexts: [
-                            TyperAnimatedText(
-                              "Flutter Developer",
-                              speed: const Duration(milliseconds: 50),
-                              textStyle: TextStyle(
-                                fontSize: 48.sp,
-                                color: Colors.white,
-                                fontFamily: "Outfit",
-                                fontWeight: FontWeight.w500,
-                              ),
-                            ),
-                            TyperAnimatedText(
-                              "Android App Developer",
-                              speed: const Duration(milliseconds: 50),
-                              textStyle: TextStyle(
-                                fontSize: 48.sp,
-                                color: Colors.white,
-                                fontFamily: "Outfit",
-                                fontWeight: FontWeight.w500,
-                              ),
-                            ),
-                            TyperAnimatedText(
-                              "IOS App Developer",
-                              speed: const Duration(milliseconds: 50),
-                              textStyle: TextStyle(
-                                fontSize: 48.sp,
-                                color: Colors.white,
-                                fontFamily: "Outfit",
-                                fontWeight: FontWeight.w500,
-                              ),
-                            ),
-                            TyperAnimatedText(
-                              "Web App Developer",
-                              speed: const Duration(milliseconds: 50),
-                              textStyle: TextStyle(
-                                fontSize: 48.sp,
-                                color: Colors.white,
-                                fontFamily: "Outfit",
-                                fontWeight: FontWeight.w500,
-                              ),
-                            ),
-                            TyperAnimatedText(
-                              "UI/UX Designer",
-                              speed: const Duration(milliseconds: 50),
-                              textStyle: TextStyle(
-                                fontSize: 48.sp,
-                                color: Colors.white,
-                                fontFamily: "Outfit",
-                                fontWeight: FontWeight.w500,
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                    Text(
-                      "Professional",
-                      textHeightBehavior: TextHeightBehavior(
-                        applyHeightToFirstAscent: false,
-                        applyHeightToLastDescent: false,
-                      ),
-                      style: TextStyle(
-                        fontSize: 48.sp,
-                        color: Colors.white,
-                        fontFamily: "Outfit",
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
-                    Text(
-                      "Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por\nscientie, musica, sport etc, litot Europa usa li sam vocabular.",
-                      style: TextStyle(
-                        fontSize: 16.sp,
-                        color: Colors.white,
-                      ),
-                    ),
-                    SizedBox(
-                      height: 20.h,
-                    ),
-                    PortfolioButton(),
-                  ],
-                ),
-              ),
-            ),
-          ],
-        ),
-        Padding(
-          padding: EdgeInsets.symmetric(horizontal: size.width / 18.w),
-          child: Center(
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Container(
-                  width: 400.w,
-                  height: 175.h,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(12.0),
-                    border: Border.all(
-                      width: 2,
-                      color: Colors.white,
-                    ),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(24.0),
-                    child: Row(
-                      children: [
-                        Expanded(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                "1,5K",
-                                style: TextStyle(
-                                  fontSize: 20.sp,
-                                  color: Colors.white,
-                                  fontFamily: "Outfit",
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                              Text(
-                                "Happy Clients",
-                                style: TextStyle(
-                                  fontSize: 18.sp,
-                                  color: Colors.white,
-                                  fontFamily: "Outfit",
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        SizedBox(
-                          width: 20,
-                        ),
-                        Expanded(
-                          child: SizedBox(
-                            child: Stack(
-                              children: [
-                                Positioned(
-                                  left: 0,
-                                  child: SizedBox(
-                                    child: CircleAvatar(
-                                      radius: 23,
-                                      child: CircleAvatar(
-                                        radius: 20,
-                                        backgroundImage: NetworkImage(
-                                            "https://yt3.googleusercontent.com/p9Vw8tiYXeJNLR7A39Nc54EkZcfYs5J6HYBbhiQbWU5u4f6iZ-UUT-y_cfdZTy86PMYNAVx3PA=s150-c-k-c0x00ffffff-no-rj"),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                Positioned(
-                                  left: 30,
-                                  child: SizedBox(
-                                    child: CircleAvatar(
-                                      radius: 23,
-                                      child: CircleAvatar(
-                                        radius: 20,
-                                        backgroundImage: NetworkImage(
-                                            "https://yt3.googleusercontent.com/p9Vw8tiYXeJNLR7A39Nc54EkZcfYs5J6HYBbhiQbWU5u4f6iZ-UUT-y_cfdZTy86PMYNAVx3PA=s150-c-k-c0x00ffffff-no-rj"),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                Positioned(
-                                  left: 60,
-                                  child: SizedBox(
-                                    child: CircleAvatar(
-                                      radius: 23,
-                                      child: CircleAvatar(
-                                        radius: 20,
-                                        backgroundImage: NetworkImage(
-                                            "https://yt3.googleusercontent.com/p9Vw8tiYXeJNLR7A39Nc54EkZcfYs5J6HYBbhiQbWU5u4f6iZ-UUT-y_cfdZTy86PMYNAVx3PA=s150-c-k-c0x00ffffff-no-rj"),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                Container(
-                  height: 175.h,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(12.0),
-                    border: Border.all(
-                      width: 2,
-                      color: Colors.white,
-                    ),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(24.0),
-                    child: Row(
-                      children: [
-                        Row(
-                          children: [
-                            Container(
-                              width: 50, // Add extra width for the border
-                              height: 50, // Add extra height for the border
-                              decoration: BoxDecoration(
-                                gradient: const LinearGradient(
-                                  colors: [
-                                    Color(0XFFFB0182),
-                                    Color(0XFFD21CE6),
-                                    Color(0XFF2FACF7),
-                                    Color(0XFF519FFC),
-                                    Color(0XFF3934F1),
-                                  ],
-                                  begin: Alignment.topLeft,
-                                  end: Alignment.bottomRight,
-                                  stops: [0.0, 0.37, 0.68, 0.77, 1.0],
-                                ),
-                                borderRadius: BorderRadius.circular(50.r),
-                              ),
-                              child: Padding(
-                                padding: const EdgeInsets.all(
-                                    2), // Adjust border thickness
-                                child: Container(
-                                  width: 50,
-                                  height: 50,
-                                  decoration: BoxDecoration(
-                                    color: Colors
-                                        .white, // Background color of the button
-                                    shape: BoxShape.circle,
-                                  ),
-                                  child: Center(
-                                    child: Icon(Icons.security),
-                                  ),
-                                ),
-                              ),
-                            ),
-                            SizedBox(
-                              width: 10.w,
-                            ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "100%",
-                                  style: TextStyle(
-                                    fontSize: 20.sp,
-                                    color: Colors.white,
-                                    fontFamily: "Outfit",
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                Text(
-                                  "Safety Privacy",
-                                  style: TextStyle(
-                                    fontSize: 18.sp,
-                                    color: Colors.white,
-                                    fontFamily: "Outfit",
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              ],
-                            )
-                          ],
-                        ),
-                        SizedBox(
-                          width: 20,
-                        ),
-                        Row(
-                          children: [
-                            Container(
-                              width: 50, // Add extra width for the border
-                              height: 50, // Add extra height for the border
-                              decoration: BoxDecoration(
-                                gradient: const LinearGradient(
-                                  colors: [
-                                    Color(0XFFFB0182),
-                                    Color(0XFFD21CE6),
-                                    Color(0XFF2FACF7),
-                                    Color(0XFF519FFC),
-                                    Color(0XFF3934F1),
-                                  ],
-                                  begin: Alignment.topLeft,
-                                  end: Alignment.bottomRight,
-                                  stops: [0.0, 0.37, 0.68, 0.77, 1.0],
-                                ),
-                                borderRadius: BorderRadius.circular(50.r),
-                              ),
-                              child: Padding(
-                                padding: const EdgeInsets.all(
-                                    2), // Adjust border thickness
-                                child: Container(
-                                  width: 50,
-                                  height: 50,
-                                  decoration: BoxDecoration(
-                                    color: Colors
-                                        .white, // Background color of the button
-                                    shape: BoxShape.circle,
-                                  ),
-                                  child: Center(
-                                    child: Icon(Icons.star),
-                                  ),
-                                ),
-                              ),
-                            ),
-                            SizedBox(
-                              width: 10.w,
-                            ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "98%",
-                                  style: TextStyle(
-                                    fontSize: 20.sp,
-                                    color: Colors.white,
-                                    fontFamily: "Outfit",
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                Text(
-                                  "Event Rating",
-                                  style: TextStyle(
-                                    fontSize: 18.sp,
-                                    color: Colors.white,
-                                    fontFamily: "Outfit",
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              ],
-                            )
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                Container(
-                  width: 250.w,
-                  height: 175.h,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(12.0),
-                    border: Border.all(
-                      width: 2,
-                      color: Colors.white,
-                    ),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(24.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "900+",
-                          style: TextStyle(
-                            fontSize: 20.sp,
-                            color: Colors.white,
-                            fontFamily: "Outfit",
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        Text(
-                          "Project Done",
-                          style: TextStyle(
-                            fontSize: 18.sp,
-                            color: Colors.white,
-                            fontFamily: "Outfit",
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ),
-      ],
     );
   }
 }
@@ -1888,7 +890,7 @@ class AppBarSection extends StatelessWidget {
       width: size.width,
       height: size.height * 0.08,
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: size.width / 16.w),
+        padding: EdgeInsets.symmetric(horizontal: size.width / 16),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -1913,9 +915,9 @@ class AppBarSection extends StatelessWidget {
               child: Text(
                 "iamporag",
                 style: TextStyle(
-                  fontSize: 28.sp,
+                  fontSize: 28,
                   color: Colors.white,
-                  fontFamily: "Outfit",
+                  fontFamily: "Goodly",
                   fontWeight: FontWeight.w500,
                 ),
               ),
@@ -1924,7 +926,10 @@ class AppBarSection extends StatelessWidget {
               children: [
                 Text(
                   "Home",
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontFamily: "Goodly",
+                  ),
                 ),
                 SizedBox(
                   width: 10,
@@ -1940,7 +945,10 @@ class AppBarSection extends StatelessWidget {
                 ),
                 Text(
                   "About Me",
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontFamily: "Goodly",
+                  ),
                 ),
                 SizedBox(
                   width: 10,
@@ -1956,7 +964,10 @@ class AppBarSection extends StatelessWidget {
                 ),
                 Text(
                   "Project",
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontFamily: "Goodly",
+                  ),
                 ),
                 SizedBox(
                   width: 10,
@@ -1972,7 +983,10 @@ class AppBarSection extends StatelessWidget {
                 ),
                 Text(
                   "Contact us",
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontFamily: "Goodly",
+                  ),
                 ),
               ],
             )
@@ -2006,7 +1020,7 @@ class TabletAppBarSection extends StatelessWidget {
       width: size.width,
       height: size.height * 0.08,
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: size.width / 32.w),
+        padding: EdgeInsets.symmetric(horizontal: size.width / 32),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -2031,7 +1045,7 @@ class TabletAppBarSection extends StatelessWidget {
               child: Text(
                 "iamporag",
                 style: TextStyle(
-                  fontSize: 38.sp,
+                  fontSize: 38,
                   color: Colors.white,
                   fontFamily: "Outfit",
                   fontWeight: FontWeight.w500,
@@ -2085,7 +1099,7 @@ class MobileAppBarSection extends StatelessWidget {
       width: size.width,
       height: size.height * 0.08,
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: size.width / 60.w),
+        padding: EdgeInsets.symmetric(horizontal: size.width / 60),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -2110,7 +1124,7 @@ class MobileAppBarSection extends StatelessWidget {
               child: Text(
                 "iamporag",
                 style: TextStyle(
-                  fontSize: 58.sp,
+                  fontSize: 58,
                   color: Colors.white,
                   fontFamily: "Outfit",
                   fontWeight: FontWeight.w500,
